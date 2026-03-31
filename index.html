@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>AttendancePro | The Academic Curator</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "outline": "#737c7f",
+            "secondary": "#5d5f61",
+            "on-secondary-container": "#4f5254",
+            "surface-container": "#eaeff1",
+            "inverse-primary": "#f0f8fd",
+            "on-primary": "#f1f9fe",
+            "primary-dim": "#4c5458",
+            "on-secondary": "#f8f9fb",
+            "surface-container-highest": "#dbe4e7",
+            "on-secondary-fixed": "#3d4041",
+            "on-tertiary": "#f7f9ff",
+            "on-primary-fixed": "#394045",
+            "inverse-surface": "#0c0f10",
+            "secondary-container": "#e1e2e4",
+            "tertiary-fixed-dim": "#c3d6ef",
+            "tertiary": "#4e6176",
+            "on-primary-container": "#4b5357",
+            "background": "#f8f9fa",
+            "on-tertiary-fixed": "#2f4155",
+            "tertiary-fixed": "#d1e4fe",
+            "primary-fixed": "#dce4e9",
+            "outline-variant": "#abb3b7",
+            "surface-container-low": "#f1f4f6",
+            "on-tertiary-fixed-variant": "#4b5d72",
+            "surface": "#f8f9fa",
+            "error": "#9f403d",
+            "tertiary-dim": "#425569",
+            "on-primary-fixed-variant": "#555d61",
+            "on-surface-variant": "#586064",
+            "primary-fixed-dim": "#ced6da",
+            "tertiary-container": "#d1e4fe",
+            "on-tertiary-container": "#415368",
+            "on-background": "#2b3437",
+            "surface-dim": "#d1dce0",
+            "surface-variant": "#dbe4e7",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#fe8983",
+            "surface-tint": "#586064",
+            "inverse-on-surface": "#9b9d9e",
+            "secondary-dim": "#515355",
+            "primary": "#586064",
+            "on-secondary-fixed-variant": "#595c5e",
+            "primary-container": "#dce4e9",
+            "secondary-fixed-dim": "#d3d4d6",
+            "on-error": "#fff7f6",
+            "surface-container-high": "#e3e9ec",
+            "on-error-container": "#752121",
+            "on-surface": "#2b3437",
+            "secondary-fixed": "#e1e2e4",
+            "surface-bright": "#f8f9fa",
+            "error-dim": "#4e0309"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .editorial-header {
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .tag-label {
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.05em;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-background min-h-screen">
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-[#f8f9fa] dark:bg-slate-950/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full shadow-none">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-[#586064] dark:text-slate-300"></span>
+      <h1
+        class="font-['Manrope'] font-bold tracking-tight text-xl text-[#586064] dark:text-slate-100 font-extrabold tracking-tighter">
+        AttendancePro</h1>
+    </div>
+    <div class="bg-[#eaeff1] dark:bg-slate-800/50 h-[1px] w-full absolute bottom-0 left-0"></div>
+  </header>
+  <main class="pt-24 pb-32 px-6 max-w-4xl mx-auto">
+    <!-- Hero Title Section (Editorial Layout) -->
+    <section class="mb-12 ml-4 md:ml-12">
+      <span class="tag-label text-label-md uppercase font-semibold text-primary/60 block mb-2">Academic Curator</span>
+      <h2 class="editorial-header text-5xl md:text-6xl font-extrabold text-on-surface leading-tight">
+        Optimize Your <br /> <span class="text-primary-dim opacity-40 italic">Presence.</span>
+      </h2>
+    </section>
+    <!-- Main Calculator Card -->
+    <div class="bg-surface-container-low p-1 rounded-[2rem]">
+      <div class="bg-surface-container-lowest rounded-[1.5rem] p-8 md:p-12 shadow-sm border border-outline-variant/5">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!-- Input Section -->
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <label class="tag-label text-[11px] font-bold text-on-surface-variant mb-3 block">TOTAL CLASSES
+                HELD</label>
+              <input
+                class="w-full bg-surface-container-highest border-none rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-on-surface text-lg font-medium"
+                id="total_classes" placeholder="e.g. 45" type="number" />
+            </div>
+            <div>
+              <label class="tag-label text-[11px] font-bold text-on-surface-variant mb-3 block">CLASSES ATTENDED</label>
+              <input
+                class="w-full bg-surface-container-highest border-none rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-on-surface text-lg font-medium"
+                id="attended_classes" placeholder="e.g. 32" type="number" />
+            </div>
+            <button
+              class="w-full bg-primary text-on-primary py-4 px-8 rounded-full font-bold text-lg hover:bg-primary-dim transition-all active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-primary/10"
+              id="calculate_btn" onclick="calculateAttendance()">
+              Calculate Status
+              <span class="material-symbols-outlined">analytics</span>
+            </button>
+          </div>
+          <!-- Visual Results Section (Bento Inspired) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Circular Result Tonal Area -->
+              <div
+                class="bg-surface-container-low rounded-3xl p-6 flex flex-col items-center justify-center text-center">
+                <span class="tag-label text-[10px] font-bold text-primary opacity-60 mb-1">CURRENT STATUS</span>
+                <div class="relative flex items-center justify-center mb-2">
+                  <h3 class="editorial-header text-4xl font-extrabold text-on-surface" id="percentage_display">0%</h3>
+                </div>
+                <span class="text-[12px] font-medium text-error flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">warning</span>
+                  <span id="status_text">Current attendance status based on data</span>
+                </span>
+              </div>
+              <!-- Advice Card -->
+              <div class="bg-primary-container/30 rounded-3xl p-6 flex flex-col justify-between">
+                <span class="tag-label text-[10px] font-bold text-on-primary-container/60 mb-4 uppercase">Academic
+                  Advice</span>
+                <p class="text-on-primary-container font-medium text-sm leading-relaxed" id="advice_text">
+                 Let’s see your bunk allowance...
+                </p>
+              </div>
+            </div>
+            <!-- Progress Bar Container -->
+            <div class="bg-surface-container p-6 rounded-3xl">
+              <div class="flex justify-between items-center mb-4">
+                <span class="tag-label text-[10px] font-bold text-on-surface-variant">ATTENDANCE TREND</span>
+                <span class="text-[11px] font-bold text-on-surface-variant">75% GOAL</span>
+              </div>
+              <div class="h-4 w-full bg-surface-container-highest rounded-full overflow-hidden relative">
+                <!-- Progress Fill -->
+                <div class="h-full bg-error rounded-full transition-all duration-500" id="progress_fill"
+                  style="width: 71%"></div>
+                <!-- Target Marker -->
+                <div class="absolute top-0 left-[75%] w-[2px] h-full bg-on-surface/20 z-10"></div>
+              </div>
+              <p class="mt-4 text-[12px] text-on-surface-variant/70 italic leading-relaxed">
+                Keep a buffer of at least 2 classes to avoid emergency drops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!-- BottomNavBar -->
+  <nav
+    class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-[#f8f9fa]/80 dark:bg-slate-950/80 backdrop-blur-xl border-t border-[#abb3b7]/10 dark:border-slate-800 shadow-[0_-4px_24px_rgba(43,52,55,0.04)]">
+    <div class="flex justify-around items-center h-20 px-4">
+      <!-- Calculator Tab (Active) -->
+      <a class="flex flex-col items-center justify-center text-[#586064] dark:text-white bg-[#dce4e9] dark:bg-slate-800 rounded-xl px-4 py-1 active:scale-90 transition-transform"
+        href="#">
+        <span class="material-symbols-outlined" data-icon="calculate"
+          style="font-variation-settings: 'FILL' 1;">calculate</span>
+        <span class="font-['Inter'] text-[11px] font-semibold tracking-wider uppercase mt-1">Calculator</span>
+      </a>
+      <!-- History Tab (Inactive) -->
+      <a class="flex flex-col items-center justify-center text-[#abb3b7] dark:text-slate-500 px-4 py-1 hover:text-[#586064] dark:hover:text-slate-200 active:scale-90 transition-transform"
+        href="#">
+        <span class="material-symbols-outlined" data-icon="history">history</span>
+        <span class="font-['Inter'] text-[11px] font-semibold tracking-wider uppercase mt-1">History</span>
+      </a>
+      <!-- Insights Tab (Inactive) -->
+      <a class="flex flex-col items-center justify-center text-[#abb3b7] dark:text-slate-500 px-4 py-1 hover:text-[#586064] dark:hover:text-slate-200 active:scale-90 transition-transform"
+        href="#">
+        <span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+        <span class="font-['Inter'] text-[11px] font-semibold tracking-wider uppercase mt-1">Insights</span>
+      </a>
+    </div>
+  </nav>
+  <script>
+    function calculateAttendance() {
+      const totalInput = document.getElementById('total_classes');
+      const attendedInput = document.getElementById('attended_classes');
+      const percentageDisplay = document.getElementById('percentage_display');
+      const statusText = document.getElementById('status_text');
+      const adviceText = document.getElementById('advice_text');
+      const progressFill = document.getElementById('progress_fill');
+
+      const total = parseInt(totalInput.value);
+      const attended = parseInt(attendedInput.value);
+
+      if (isNaN(total) || isNaN(attended)) {
+        alert("Please enter valid numbers.");
+        return;
+      }
+
+      if (total < 0 || attended < 0) {
+        alert("Total and Attended classes cannot be negative.");
+        return;
+      }
+
+      if (attended > total) {
+        alert("Attended classes cannot exceed total classes.");
+        return;
+      }
+
+      if (total === 0) {
+        percentageDisplay.textContent = "0%";
+        statusText.textContent = "No classes held";
+        adviceText.textContent = "Start attending classes to build your record.";
+        progressFill.style.width = "0%";
+        return;
+      }
+
+      const percentage = (attended / total) * 100;
+      percentageDisplay.textContent = Math.round(percentage) + "%";
+
+      if (percentage >= 75) {
+        // Calculate bunks
+        const max_bunk = Math.floor((attended / 0.75) - total);
+        statusText.textContent = "Safe Threshold";
+        statusText.parentElement.classList.remove('text-error');
+        statusText.parentElement.classList.add('text-green-600');
+        statusText.parentElement.querySelector('.material-symbols-outlined').textContent = 'check_circle';
+
+        if (max_bunk > 0) {
+          adviceText.innerHTML = `You can bunk <span class="font-bold underline">${max_bunk} more</span> classes without dropping below 75%.`;
+        } else {
+          adviceText.innerHTML = `You're at the <span class="font-bold underline">limit</span>. Don't bunk any more classes.`;
+        }
+
+        progressFill.classList.remove('bg-error');
+        progressFill.classList.add('bg-green-500');
+      } else {
+        // Calculate required classes
+        const req_classes = Math.ceil(3 * total - 4 * attended);
+        statusText.textContent = "Below Threshold";
+        statusText.parentElement.classList.add('text-error');
+        statusText.parentElement.classList.remove('text-green-600');
+        statusText.parentElement.querySelector('.material-symbols-outlined').textContent = 'warning';
+
+        adviceText.innerHTML = `You need to attend <span class="font-bold underline">${req_classes} more</span> consecutive classes to reach the 75% mark.`;
+
+        progressFill.classList.add('bg-error');
+        progressFill.classList.remove('bg-green-500');
+      }
+
+      progressFill.style.width = percentage + "%";
+    }
+  </script>
+</body>
+
+</html>
